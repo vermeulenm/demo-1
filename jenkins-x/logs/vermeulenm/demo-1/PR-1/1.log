@@ -1,0 +1,50 @@
+Step: step-credential-initializer-kncpf:
+
+{"level":"warn","ts":1565637072.4633305,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565637072.464489,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-jp9wd:
+
+{"level":"warn","ts":1565637072.9572582,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565637072.9640112,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-**********-demo-1-pr-1-ser-wxp7w:
+
+{"level":"warn","ts":1565637077.8958776,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565637078.0743992,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/demo-1.git @ 05168f7448124a8309fb7e87a670f784eb4a2d99 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:05168f7448124a8309fb7e87a670f784eb4a2d99,1:3433c4f793c6c9f5e71f6ba85ca423b1f7d148df","time":"2019-08-12T19:11:18Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 3433c4f793c6c9f5e71f6ba85ca423b1f7d148df: 05168f7448124a8309fb7e87a670f784eb4a2d99: in ","time":"2019-08-12T19:11:18Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-12T19:11:18Z"}
+{"level":"debug","msg":"ran git reset --hard 05168f7448124a8309fb7e87a670f784eb4a2d99 in ","time":"2019-08-12T19:11:18Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-12T19:11:18Z"}
+{"level":"debug","msg":"ran git merge 3433c4f793c6c9f5e71f6ba85ca423b1f7d148df in ","time":"2019-08-12T19:11:18Z"}
+MERGED SHA SUBJECT
+3433c4f79  Goland example using jenkins x
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 3433c4f793c6c9f5e71f6ba85ca423b1f7d148df: 05168f7448124a8309fb7e87a670f784eb4a2d99: in ","time":"2019-08-12T19:11:20Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-12T19:11:20Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-12T19:11:20Z"}
+{"level":"debug","msg":"ran git reset --hard 05168f7448124a8309fb7e87a670f784eb4a2d99 in ","time":"2019-08-12T19:11:20Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-12T19:11:20Z"}
+{"level":"debug","msg":"ran git merge 3433c4f793c6c9f5e71f6ba85ca423b1f7d148df in ","time":"2019-08-12T19:11:20Z"}
+MERGED SHA SUBJECT
+3433c4f79  Goland example using jenkins x
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-12T19:11:20Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-12T19:11:20Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml","time":"2019-08-12T19:11:21Z"}
+Step: step-create-tekton-crds:
+
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"PipelineActivity for **********-demo-1-PR-1-1","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"upserted PipelineResource **********-demo-1-pr-1-serverle for the git repository https://github.com/**********/demo-1.git and branch PR-1","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"upserted Task **********-demo-1-pr-1-serverle-from-build-pack-1","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"upserted Pipeline **********-demo-1-pr-1-serverle-1","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"created PipelineRun **********-demo-1-pr-1-serverle-1","time":"2019-08-12T19:11:22Z"}
+{"level":"info","msg":"created PipelineStructure **********-demo-1-pr-1-serverle-1","time":"2019-08-12T19:11:23Z"}
