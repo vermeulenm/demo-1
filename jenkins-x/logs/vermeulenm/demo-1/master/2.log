@@ -1,0 +1,44 @@
+Step: step-credential-initializer-rtrhs:
+
+{"level":"warn","ts":1565637616.7252584,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565637616.7256038,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-dr2lb:
+
+{"level":"warn","ts":1565637617.7552376,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565637617.7602472,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-**********-demo-1-master-r-b9v4l:
+
+{"level":"warn","ts":1565637622.8432386,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565637623.011147,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/demo-1.git @ a0de6c40b0739dec4306adbcbdbec43d846dcfb1 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:a0de6c40b0739dec4306adbcbdbec43d846dcfb1","time":"2019-08-12T19:20:23Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-12T19:20:23Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-12T19:20:23Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-12T19:20:23Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-release-effective.yml","time":"2019-08-12T19:20:24Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-08-12T19:20:25Z"}
+{"level":"info","msg":"","time":"2019-08-12T19:20:26Z"}
+{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-08-12T19:20:26Z"}
+{"level":"info","msg":"Updating chart version in charts/demo-1/Chart.yaml to 0.0.1","time":"2019-08-12T19:20:26Z"}
+{"level":"info","msg":"Updating repository in charts/demo-1/values.yaml to 141854384972.dkr.ecr.us-east-1.amazonaws.com/**********/demo-1","time":"2019-08-12T19:20:26Z"}
+{"level":"info","msg":"Updating tag in charts/demo-1/values.yaml to 0.0.1","time":"2019-08-12T19:20:26Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"","time":"2019-08-12T19:20:28Z"}
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"PipelineActivity for **********-demo-1-master-2","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"upserted PipelineResource **********-demo-1-master-releas for the git repository https://github.com/**********/demo-1.git and branch master","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"upserted Task **********-demo-1-master-releas-from-build-pack-2","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"upserted Pipeline **********-demo-1-master-releas-2","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"created PipelineRun **********-demo-1-master-releas-2","time":"2019-08-12T19:20:28Z"}
+{"level":"info","msg":"created PipelineStructure **********-demo-1-master-releas-2","time":"2019-08-12T19:20:28Z"}
