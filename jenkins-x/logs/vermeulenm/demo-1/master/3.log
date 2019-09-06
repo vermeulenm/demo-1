@@ -1,0 +1,39 @@
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-credential-initializer-4s5z9[0m
+{"level":"warn","ts":1567777013.2052684,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567777013.2062201,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-working-dir-initializer-ckmsx[0m
+{"level":"warn","ts":1567777014.4080667,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567777014.4141772,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-git-source-meta-vermeulenm-demo-1-master-r-gkc62[0m
+{"level":"warn","ts":1567777019.3725574,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567777019.5325904,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/demo-1.git @ 511ac567498bb77c8050f7d59b93258851693565 in path /workspace/source"}
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:511ac567498bb77c8050f7d59b93258851693565","time":"2019-09-06T13:36:59Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-09-06T13:36:59Z"}
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-create-effective-pipeline[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-09-06T13:37:00Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-09-06T13:37:00Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-release-effective.yml","time":"2019-09-06T13:37:01Z"}
+
+Showing logs for build [32mmeta-vermeulenm-demo-1-master-r-q6fxl-3[0m stage [32mapp-extension[0m and container [32mstep-create-tekton-crds[0m
+{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-09-06T13:37:02Z"}
+{"level":"info","msg":"","time":"2019-09-06T13:37:02Z"}
+{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-09-06T13:37:02Z"}
+{"level":"info","msg":"Updating chart version in charts/demo-1/Chart.yaml to 0.0.2","time":"2019-09-06T13:37:02Z"}
+{"level":"info","msg":"Updating repository in charts/demo-1/values.yaml to 141854384972.dkr.ecr.us-east-1.amazonaws.com/**********/demo-1","time":"2019-09-06T13:37:03Z"}
+{"level":"info","msg":"Updating tag in charts/demo-1/values.yaml to 0.0.2","time":"2019-09-06T13:37:03Z"}
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: fatal: could not read Username for 'https://github.com': No such device or address: failed to run 'git push origin v0.0.2' command in directory '', output: 'fatal: could not read Username for 'https://github.com': No such device or address'
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'app-extension' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
