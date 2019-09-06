@@ -1,0 +1,135 @@
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-credential-initializer-swf9p[0m
+{"level":"warn","ts":1567776146.2593493,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567776146.2604349,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-working-dir-initializer-pthdm[0m
+{"level":"warn","ts":1567776147.2229116,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567776147.2295847,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-git-source-meta-vermeulenm-demo-1-pr-2-ser-p6c5x[0m
+{"level":"warn","ts":1567776202.2806737,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567776202.5202165,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/demo-1.git @ a0de6c40b0739dec4306adbcbdbec43d846dcfb1 in path /workspace/source"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:a0de6c40b0739dec4306adbcbdbec43d846dcfb1,2:93c09b53cfac6d4fbf1ef49b7144816d0027c7f2","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2: a0de6c40b0739dec4306adbcbdbec43d846dcfb1: in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git reset --hard a0de6c40b0739dec4306adbcbdbec43d846dcfb1 in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git merge 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2 in ","time":"2019-09-06T13:23:23Z"}
+{"level":"info","msg":"Merged SHA 06361406d45175d716a4e2754d722b18e7e09ae0 with commit message 'Merge commit '93c09b53cfac6d4fbf1ef49b7144816d0027c7f2'' into base branch master","time":"2019-09-06T13:23:23Z"}
+{"level":"info","msg":"Merged SHA 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2 with commit message 'Test 1 check in' into base branch master","time":"2019-09-06T13:23:23Z"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-merge-pull-refs[0m
+{"level":"debug","msg":"ran git fetch origin 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2: a0de6c40b0739dec4306adbcbdbec43d846dcfb1: in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git reset --hard a0de6c40b0739dec4306adbcbdbec43d846dcfb1 in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-09-06T13:23:23Z"}
+{"level":"debug","msg":"ran git merge 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2 in ","time":"2019-09-06T13:23:23Z"}
+{"level":"info","msg":"Merged SHA 9ece25280fd607b8f7e69f1bd109bab1f98cd72c with commit message 'Merge commit '93c09b53cfac6d4fbf1ef49b7144816d0027c7f2'' into base branch master","time":"2019-09-06T13:23:23Z"}
+{"level":"info","msg":"Merged SHA 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2 with commit message 'Test 1 check in' into base branch master","time":"2019-09-06T13:23:23Z"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-create-effective-pipeline[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-09-06T13:23:24Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-09-06T13:23:24Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml","time":"2019-09-06T13:23:26Z"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mapp-extension[0m and container [32mstep-create-tekton-crds[0m
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"PipelineActivity for **********-demo-1-PR-2-1","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"upserted PipelineResource **********-demo-1-pr-2-serverle for the git repository https://github.com/**********/demo-1.git","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"upserted Task **********-demo-1-pr-2-serverle-from-build-pack-1","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"upserted Pipeline **********-demo-1-pr-2-serverle-1","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"created PipelineRun **********-demo-1-pr-2-serverle-1","time":"2019-09-06T13:23:27Z"}
+{"level":"info","msg":"created PipelineStructure **********-demo-1-pr-2-serverle-1","time":"2019-09-06T13:23:27Z"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mbgl6[0m
+{"level":"warn","ts":1567776209.42666,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567776209.4277318,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6scw5[0m
+{"level":"warn","ts":1567776210.3871944,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1567776210.3943849,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/preview\""}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vermeulenm-demo-1-pr-2-serverle-nzzlv[0m
+{"level":"warn","ts":1567776218.464428,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1567776218.676679,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/demo-1.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/demo-1 main.go
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/demo-1"]                       
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/06 13:23:47 pushed blob: sha256:1163eb9d2019ec596f7783c2f6aee9adad4ffaba5ece0f0abaf6be9b2c281eeb
+2019/09/06 13:23:47 pushed blob: sha256:7d3d2be8a197c372a92e82cee93e97c9a89ba1639b319062d47d65f1189b316c
+2019/09/06 13:23:47 141854384972.dkr.ecr.us-east-1.amazonaws.com/**********/demo-1:0.0.0-SNAPSHOT-PR-2-1: digest: sha256:f64afe6218444575cbe580d371657b02ddfb825f00737221a67f28ce9984a877 size: 428
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-2-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 141854384972.dkr.ecr.us-east-1.amazonaws.com\/**********\/demo-1|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-2-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-2-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mvermeulenm-demo-1-pr-2-serverle-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Commit author email is empty for: 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2
+Looking for commits in: /workspace/source/
+WARNING: Commit not found: 93c09b53cfac6d4fbf1ef49b7144816d0027c7f2
+Created environment **********-demo-1-pr-2
+Namespace **-**********-demo-1-pr-2 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: wdpr-sandbox.disney.com
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: 141854384972.dkr.ecr.us-east-1.amazonaws.com/**********/demo-1
+    tag: 0.0.0-SNAPSHOT-PR-2-1
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities **********-demo-1-pr-2-1 which has status Running
+Preview application is now available at: http://demo-1.**-**********-demo-1-pr-2.wdpr-sandbox.disney.com
